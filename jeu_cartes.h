@@ -3,14 +3,17 @@
 #include "carte.h"
 
 class jeu_cartes {
-    carte *tete;
-    carte *queue;
+    carte *head;
+    carte *tail;
     int nb_cartes;
 public:
     jeu_cartes();
     void remplirjeu();
     void afficherjeu();
-    void melangerjeu(jeu_cartes jeu_vide);
+    void addhead(carte *c);
+    void addtail(carte *c);
+    void viderjeu();
+    void melangerjeu();
     ~jeu_cartes();
 };
 

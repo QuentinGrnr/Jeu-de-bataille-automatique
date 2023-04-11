@@ -7,5 +7,6 @@ int main() {
     jeu_cartes jeu;
     jeu.remplirjeu();
     jeu.afficherjeu();
+    jeu.melangerjeu();
     return 0;
 }

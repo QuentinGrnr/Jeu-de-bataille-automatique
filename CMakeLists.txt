@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.23)
+project(TP4S2POO)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(.)
+
+add_executable(TP4S2POO
+        carte.cpp
+        carte.h
+        jeu_cartes.cpp
+        jeu_cartes.h
+        main.cpp)
