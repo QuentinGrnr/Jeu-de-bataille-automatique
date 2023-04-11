@@ -11,6 +11,7 @@ public:
     carte();
     carte(int forme, int valeur);
     carte(int forme, int valeur, carte *suivant);
+    ~carte();
 };
 
 

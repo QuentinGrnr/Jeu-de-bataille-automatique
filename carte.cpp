@@ -17,3 +17,8 @@ carte::carte(int forme, int valeur) {
     this->forme = forme;
     this->suivant = nullptr;
 }
+
+carte::~carte() {
+    this->suivant = nullptr;
+
+}
