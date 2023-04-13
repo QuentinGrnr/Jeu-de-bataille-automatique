@@ -73,7 +73,6 @@ void jeu_cartes::afficherjeu() {
         }
         tmp = tmp->suivant;
     }
-    delete tmp;
 }
 
 void jeu_cartes::addhead(carte *c) {
@@ -86,7 +85,6 @@ void jeu_cartes::addhead(carte *c) {
     tmp->suivant = this->head;
     this->head = tmp;
     this->nb_cartes++;
-    delete tmp;
 }
 
 void jeu_cartes::addtail(carte *c) {
@@ -99,7 +97,6 @@ void jeu_cartes::addtail(carte *c) {
     this->tail->suivant = tmp;
     this->tail = tmp;
     this->nb_cartes++;
-    delete tmp;
 }
 
 void jeu_cartes::viderjeu() {
@@ -122,17 +119,22 @@ void jeu_cartes::viderjeu() {
 void jeu_cartes::melangerjeu() {
     jeu_cartes jeu_vide;
     carte *tmp= this->head;
-    while (this->nb_cartes != 0){
-        if (this->nb_cartes % 2 == 0){
+    cout << this->tail->valeur << " " << this->tail->forme << endl;
+    jeu_vide.addtail(tmp);
+    int carte = this->nb_cartes;
+    carte--;
+    while (carte != 0){
+        tmp = tmp->suivant;
+        if (carte % 2 == 0){
+            cout << "addtail " << carte << endl;
             jeu_vide.addtail(tmp);
         } else {
+            cout << "addhead " << carte << endl;
             jeu_vide.addhead(tmp);
         }
-        tmp = tmp->suivant;
-        this->nb_cartes--;
+        cout << tmp->valeur << " " << tmp->forme << endl;
+        carte--;
     }
 }
-
-//défois ça crash défois non ==> a régler
 
 
