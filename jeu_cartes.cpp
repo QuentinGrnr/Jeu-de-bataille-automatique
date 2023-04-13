@@ -25,7 +25,6 @@ void jeu_cartes::remplirjeu() {
         }
     }
     this->tail = tmp;
-    delete tmp;
     cout << "Le jeu de cartes a ete rempli" << endl;
 }
 
@@ -119,22 +118,18 @@ void jeu_cartes::viderjeu() {
 void jeu_cartes::melangerjeu() {
     jeu_cartes jeu_vide;
     carte *tmp= this->head;
-    cout << this->tail->valeur << " " << this->tail->forme << endl;
-    jeu_vide.addtail(tmp);
     int carte = this->nb_cartes;
-    carte--;
     while (carte != 0){
-        tmp = tmp->suivant;
         if (carte % 2 == 0){
-            cout << "addtail " << carte << endl;
             jeu_vide.addtail(tmp);
         } else {
-            cout << "addhead " << carte << endl;
             jeu_vide.addhead(tmp);
         }
         cout << tmp->valeur << " " << tmp->forme << endl;
+        tmp = tmp->suivant;
         carte--;
     }
+    jeu_vide.afficherjeu();
 }
 
 

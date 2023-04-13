@@ -21,7 +21,6 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP4S2POO.dir/jeu_cartes.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP4S2POO.dir/jeu_cartes.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP4S2POO.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP4S2POO.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TP4S2POO.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TP4S2POO.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jeu_cartes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/jeu_cartes.cpp" afterDir="false" />
@@ -84,7 +83,7 @@
       <updated>1681204283534</updated>
       <workItem from="1681204285279" duration="58000" />
       <workItem from="1681204351512" duration="17257000" />
-      <workItem from="1681406926773" duration="2153000" />
+      <workItem from="1681406926773" duration="3571000" />
     </task>
     <servers />
   </component>
