@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     jeu_cartes jeu;
     jeu.remplirjeu();
-    jeu.afficherjeu();
     jeu.melangerjeu();
+    jeu.afficherjeu();
     return 0;
 }

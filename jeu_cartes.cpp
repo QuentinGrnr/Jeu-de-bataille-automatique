@@ -7,7 +7,6 @@ jeu_cartes::jeu_cartes() {
     this->head = nullptr;
     this->tail = nullptr;
     this->nb_cartes = 0;
-    cout << "Creation du jeu de cartes" << endl;
 }
 
 void jeu_cartes::remplirjeu() {
@@ -25,7 +24,7 @@ void jeu_cartes::remplirjeu() {
         }
     }
     this->tail = tmp;
-    cout << "Le jeu de cartes a ete rempli" << endl;
+    cout << "Le jeu de cartes a ete rempli" << endl << endl;
 }
 
 jeu_cartes::~jeu_cartes() {
@@ -35,6 +34,10 @@ jeu_cartes::~jeu_cartes() {
 void jeu_cartes::afficherjeu() {
     carte *tmp;
     tmp = this->head;
+    if (tmp == nullptr){
+        cout << "Le jeu de cartes est vide" << endl;
+        return;
+    }
     for (int i = 0; i < this->nb_cartes; i++){
         switch (tmp->valeur) {
             case 11:
@@ -72,12 +75,14 @@ void jeu_cartes::afficherjeu() {
         }
         tmp = tmp->suivant;
     }
+    cout << endl;
 }
 
 void jeu_cartes::addhead(carte *c) {
     carte *tmp = new carte (c->forme, c->valeur);
-    if (this->head == nullptr){
+    if (this->head == nullptr && this->tail == nullptr){
         this->head = tmp;
+        this->tail = tmp;
         this->nb_cartes++;
         return;
     }
@@ -88,8 +93,9 @@ void jeu_cartes::addhead(carte *c) {
 
 void jeu_cartes::addtail(carte *c) {
     carte *tmp = new carte (c->forme, c->valeur);
-    if (this->tail == nullptr){
+    if (this->tail == nullptr && this->head == nullptr){
         this->tail = tmp;
+        this->head = tmp;
         this->nb_cartes++;
         return;
     }
@@ -115,21 +121,34 @@ void jeu_cartes::viderjeu() {
     nb_cartes = 0;
 }
 
+void jeu_cartes::copy(jeu_cartes *j) {
+    this->viderjeu();
+    carte *tmp = j->head;
+    while (tmp != nullptr){
+        this->addtail(tmp);
+        tmp = tmp->suivant;
+    }
+}
+
 void jeu_cartes::melangerjeu() {
     jeu_cartes jeu_vide;
-    carte *tmp= this->head;
-    int carte = this->nb_cartes;
-    while (carte != 0){
-        if (carte % 2 == 0){
-            jeu_vide.addtail(tmp);
-        } else {
-            jeu_vide.addhead(tmp);
+    carte *tmp;
+    for (int i = 0; i < 15; i++){ // Melange 15 fois en utilisant la methode tail/head alternée
+        tmp = this->head;
+        int carte = this->nb_cartes;
+        while (carte != 0){
+            if (carte % 2 == 0){
+                jeu_vide.addtail(tmp);
+            } else {
+                jeu_vide.addhead(tmp);
+            }
+            tmp = tmp->suivant;
+            carte--;
         }
-        cout << tmp->valeur << " " << tmp->forme << endl;
-        tmp = tmp->suivant;
-        carte--;
+        this->copy(&jeu_vide);
+        jeu_vide.viderjeu();
     }
-    jeu_vide.afficherjeu();
+    cout << "Le jeu de cartes a ete melange 15 fois" << endl << endl;
 }
 
 

@@ -14,6 +14,7 @@ public:
     void addtail(carte *c);
     void viderjeu();
     void melangerjeu();
+    void copy(jeu_cartes *j);
     ~jeu_cartes();
 };
 
