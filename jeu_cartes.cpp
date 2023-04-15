@@ -133,7 +133,7 @@ void jeu_cartes::copy(jeu_cartes *j) {
 void jeu_cartes::melangerjeu() {
     jeu_cartes jeu_vide;
     carte *tmp;
-    for (int i = 0; i < 23; i++){ // Melange 15 fois en utilisant la methode tail/head alternée
+    for (int i = 0; i < 15; i++){ // Melange 15 fois en utilisant la methode tail/head alternée
         tmp = this->head;
         int carte = this->nb_cartes;
         while (carte != 0){
@@ -254,7 +254,6 @@ void jeu_cartes::jouer(int nb_joueurs) {
         }
 
         //////// Vider la table !!
-        play = false;
         nbr_manche++;
     }
 }
