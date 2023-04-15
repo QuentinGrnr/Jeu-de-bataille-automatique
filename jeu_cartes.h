@@ -15,6 +15,8 @@ public:
     void viderjeu();
     void melangerjeu();
     void copy(jeu_cartes *j);
+    jeu_cartes* distribuer(int nb_joueurs);
+    void jouer(int nb_joueurs);
     ~jeu_cartes();
 };
 

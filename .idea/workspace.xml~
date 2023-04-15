@@ -18,11 +18,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e428c79-3890-4e01-8419-9c2aa0c1d81b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/carte.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/carte.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carte.h" beforeDir="false" afterPath="$PROJECT_DIR$/carte.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP4S2POO.dir/carte.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP4S2POO.dir/carte.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP4S2POO.dir/jeu_cartes.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP4S2POO.dir/jeu_cartes.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP4S2POO.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TP4S2POO.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/TP4S2POO.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TP4S2POO.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeu_cartes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/jeu_cartes.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jeu_cartes.h" beforeDir="false" afterPath="$PROJECT_DIR$/jeu_cartes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +85,9 @@
       <workItem from="1681204285279" duration="58000" />
       <workItem from="1681204351512" duration="17257000" />
       <workItem from="1681406926773" duration="4078000" />
-      <workItem from="1681473487226" duration="1000" />
+      <workItem from="1681473487226" duration="2054000" />
+      <workItem from="1681553540404" duration="598000" />
+      <workItem from="1681584213537" duration="11227000" />
     </task>
     <servers />
   </component>

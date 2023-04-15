@@ -7,6 +7,7 @@ class carte {
     int valeur;
     int forme;
     carte *suivant;
+    bool gagnant; // indique quand une carte est gagnante
 public:
     carte();
     carte(int forme, int valeur);
