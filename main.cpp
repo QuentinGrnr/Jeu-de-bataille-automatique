@@ -5,7 +5,6 @@ using namespace std;
 
 int main() {
     jeu_cartes jeu;
-    jeu.jouer(4);
-    jeu_cartes* playerstab = jeu.distribuer(5);
+    jeu.jouer(2);
     return 0;
 }

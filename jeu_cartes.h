@@ -13,7 +13,7 @@ public:
     void addhead(carte *c);
     void addtail(carte *c);
     void viderjeu();
-    void melangerjeu();
+    void melangerjeu(int nb_melanges);
     void copy(jeu_cartes *j);
     jeu_cartes* distribuer(int nb_joueurs);
     void jouer(int nb_joueurs);
