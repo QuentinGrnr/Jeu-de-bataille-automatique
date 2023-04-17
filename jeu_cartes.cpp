@@ -180,7 +180,6 @@ void jeu_cartes::jouer(int nb_joueurs) {
     }
     srand (time(NULL));// on ajoute l'aléatoire
     this->remplirjeu();
-
     // j'ai pu constater que certains nombre de mélange causaient des batailles infinie qui empéchait le jeu de se terminer, ce qui, dans le vrais jeu a une probalitée infime de se produire
     // le cas de bataille infini étant presque impossible a fix avec seulement deux classes (jeu de carte et carte) j'ai décidé de faire un nombre de mélange aléatoire entre 0 et 200 dans un premier temps
     //Puis de mélanger chaque jeux de chaques joueurs entre 0 et 200 fois aussi. Ce qui fait diparaitre ce cas rarissime.
@@ -342,8 +341,6 @@ void jeu_cartes::jouer(int nb_joueurs) {
 
         jeu_cartes_gagne.viderjeu();
     }
-    // gerer cas cartes toutes pareilles => bataille infinie => égalités
-    // gérer 17 bizzare
 }
 
 
