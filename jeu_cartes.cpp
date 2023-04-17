@@ -77,7 +77,6 @@ void jeu_cartes::afficherjeu() {
         }
         tmp = tmp->suivant;
     }
-    cout << nb_cartes   << endl;
     cout << endl;
 }
 
@@ -324,11 +323,6 @@ void jeu_cartes::jouer(int nb_joueurs) {
         }
 
         cout << endl;
-        for (int i = 0; i < nb_joueurs; i++){
-            cout << "Joueur " << i+1 << " : " << endl;
-            playerstab[i].afficherjeu();
-        }
-
         for (int i = 0; i < nb_joueurs; i++){
             cout << "Joueur " << i+1 << " : " << endl;
             playerstab[i].afficherjeu();
