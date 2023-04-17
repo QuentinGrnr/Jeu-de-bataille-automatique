@@ -329,11 +329,18 @@ void jeu_cartes::jouer(int nb_joueurs) {
             playerstab[i].afficherjeu();
         }
 
+        for (int i = 0; i < nb_joueurs; i++){
+            cout << "Joueur " << i+1 << " : " << endl;
+            playerstab[i].afficherjeu();
+        }
 
         if (nbr_players_ingame == 1){
             for (int i = 0; i < nb_joueurs; i++){
                 if (playerstab[i].nb_cartes != 0){
                     cout << "Le joueur " << i+1 << " a gagne la partie" << endl;
+                    cout << "Voici son jeu de carte trie : " << endl;
+                    playerstab[i].trierjeu();
+                    playerstab[i].afficherjeu();
                     play = false;
                 }
             }
@@ -343,4 +350,40 @@ void jeu_cartes::jouer(int nb_joueurs) {
     }
 }
 
+void jeu_cartes::trierjeu() {
+    bool swapped = true;
+    int j = 0;
+    carte *ptr1;
+    carte *lptr = nullptr;
 
+    if (head == nullptr) {
+        return;
+    }
+
+    while (swapped) {
+        swapped = false;
+        ptr1 = head;
+
+        while (ptr1->suivant != lptr) {
+            if ((ptr1->forme > ptr1->suivant->forme) ||
+                (ptr1->forme == ptr1->suivant->forme && ptr1->valeur > ptr1->suivant->valeur)) {
+                swap(ptr1, ptr1->suivant);
+                swapped = true;
+            }
+            ptr1 = ptr1->suivant;
+        }
+        lptr = ptr1;
+    }
+}
+
+void jeu_cartes::swap(carte *a, carte *b) {
+    int temp_forme = a->forme;
+    int temp_valeur = a->valeur;
+    bool temp_gagnant = a->gagnant;
+    a->forme = b->forme;
+    a->valeur = b->valeur;
+    a->gagnant = b->gagnant;
+    b->forme = temp_forme;
+    b->valeur = temp_valeur;
+    b->gagnant = temp_gagnant;
+}

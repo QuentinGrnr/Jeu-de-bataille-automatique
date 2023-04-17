@@ -17,6 +17,8 @@ public:
     void copy(jeu_cartes *j);
     jeu_cartes* distribuer(int nb_joueurs);
     void jouer(int nb_joueurs);
+    void trierjeu();
+    void swap(carte *a, carte *b);
     ~jeu_cartes();
 };
 
